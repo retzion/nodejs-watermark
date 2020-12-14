@@ -1,12 +1,13 @@
 {
-  "name": "node-watermark",
+  "name": "nodejs-watermark",
   "version": "0.1.0",
   "description": "",
   "main": "server.js",
+  "repository": "https://github.com/retzion/nodejs-watermark.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "start:local": "PORT=3010 nodemon --inspect server.js"
+    "start:local": "PORT=3001 nodemon --inspect server.js"
   },
   "author": "",
   "license": "ISC",
