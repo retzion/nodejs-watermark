@@ -16,7 +16,7 @@ function convertImage(inputStream) {
     .stream()
 }
 
-app.get("/:photoReference", function (req, res) {
+app.get("/r/:photoReference", function (req, res) {
   const url = `https://maps.googleapis.com/maps/api/place/photo?maxwidth=1200&photoreference=${req.params.photoReference}&key=${process.env["GOOGLE_PLACES_API_KEY"]}`
   res.set("Content-Type", "image/png")
   convertImage(request.get(url)).pipe(res)
