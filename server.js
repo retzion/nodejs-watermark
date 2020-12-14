@@ -8,10 +8,9 @@ const port = process.env["PORT"] || 3000
 
 const app = express()
 
-const sourceUrl = `https://picsum.photos/id/%PHOTO_ID%/800/450`
-
 function convertImage(inputStream) {
   return gm(inputStream)
+    .resize(600, 336)
     .composite("watermark.png")
     .stream()
 }
