@@ -12,6 +12,7 @@ function convertImage(inputStream) {
   return gm(inputStream)
     .resize(600, 336)
     .composite("watermark.png")
+    .geometry("+60+60")
     .stream()
 }
 
