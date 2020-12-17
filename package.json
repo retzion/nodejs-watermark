@@ -1,6 +1,6 @@
 {
   "name": "nodejs-watermark",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Simple solution for watermarking images with other images.",
   "main": "server.js",
   "repository": "https://github.com/retzion/nodejs-watermark.git",
