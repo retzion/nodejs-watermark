@@ -5,8 +5,11 @@
 ![Stars](https://img.shields.io/github/stars/retzion/nodejs-watermark)
 [![License: GPL v2](https://img.shields.io/badge/License-GPL%20v2-blue.svg)](https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)
 
-[See the demo](https://node-watermark.herokuapp.com/sample) (<i>[view source](https://github.com/retzion/nodejs-watermark)</i>)
+[See the demo](https://node-watermark.herokuapp.com/sample) (master branch of this repo deployed to Heroku)
 
+[Get the NPM package](https://www.npmjs.com/package/node-image-watermark)
+
+<br />
 Try it out on your local machine:
 
 1. Install [GraphicsMagick](http://www.graphicsmagick.org/) on your machine (or a buildpack on your server)
