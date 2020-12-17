@@ -1,9 +1,9 @@
 {
-  "name": "node-image-watermark",
+  "name": "nodejs-watermark",
   "version": "0.1.0",
   "description": "Simple solution for watermarking images with other images.",
   "main": "server.js",
-  "repository": "https://github.com/retzion/node-image-watermark.git",
+  "repository": "https://github.com/retzion/nodejs-watermark.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
