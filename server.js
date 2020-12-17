@@ -1,25 +1,27 @@
-const gm = require("gm")
-const request = require("request")
 const express = require("express")
-
-const port = process.env["PORT"] || 3000
+const watermark = require("./src/watermark")
 
 const app = express()
+const port = process.env["PORT"] || 3000
 
-function convertImage(inputStream) {
-  return gm(inputStream)
-    .resize(600, 336)
-    .composite("watermark.png")
-    .geometry("+30+30")
-    .stream()
-}
-
-app.get("/:url", function (req, res) {
-  const url = decodeURIComponent(req.params.url)
+app.get("/sample", function (req, res) {
   res.set("Content-Type", "image/png")
-  convertImage(request.get(url)).pipe(res)
+  watermark({
+    imageUrl: "https://picsum.photos/900/600",
+  }).pipe(res)
 })
 
-app.listen(port, function () {
-  console.log(`Node Watermark listening on port ${port}!`)
+app.get("/u/:imageUrl", function (req, res) {
+  const { imageUrl } = req.params
+  if (!imageUrl) res.sendStatus(404)
+
+  res.set("Content-Type", "image/png")
+  watermark({
+    ...req.query,
+    ...req.params,
+  }).pipe(res)
+})
+
+app.listen(port, () => {
+  console.log(`Node Image Watermark listening on port ${port}!`)
 })

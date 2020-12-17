@@ -1,18 +1,17 @@
 {
-  "name": "nodejs-watermark",
+  "name": "node-image-watermark",
   "version": "0.1.0",
-  "description": "",
+  "description": "Simple solution for watermarking images with other images.",
   "main": "server.js",
-  "repository": "https://github.com/retzion/nodejs-watermark.git",
+  "repository": "https://github.com/retzion/node-image-watermark.git",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "start:local": "PORT=3001 nodemon --inspect server.js"
+    "dev": "PORT=3000 nodemon --inspect server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "gm": "^1.23.1",
     "request": "^2.88.2"
